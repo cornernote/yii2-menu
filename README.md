@@ -1,6 +1,6 @@
 # Yii2 Menu
 
-Menu manager for Yii2
+Menu manager for Yii2.
 
 
 ## Installation
