@@ -11,6 +11,9 @@
             "homepage": "http://mrphp.com.au/"
         }
     ],
+    "require": {
+        "slatiusa/yii2-nestable": "*"
+    },
     "autoload": {
         "psr-4": {
             "cornernote\\menu\\": ""
