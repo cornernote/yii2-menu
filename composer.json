@@ -1,0 +1,19 @@
+{
+    "name": "cornernote/yii2-menu",
+    "description": "Menu manager for Yii2.",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "keywords": ["yii2", "menu"],
+    "authors": [
+        {
+            "name": "Brett O'Donnell",
+            "email": "cornernote@gmail.com",
+            "homepage": "http://mrphp.com.au/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "cornernote\\menu\\": ""
+        }
+    }
+}
