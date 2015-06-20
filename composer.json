@@ -1,9 +1,9 @@
 {
     "name": "cornernote/yii2-menu",
     "description": "Menu manager for Yii2.",
+    "keywords": ["yii2", "menu"],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
-    "keywords": ["yii2", "menu"],
     "authors": [
         {
             "name": "Brett O'Donnell",
@@ -12,11 +12,12 @@
         }
     ],
     "require": {
+        "yiisoft/yii2": "*",
         "slatiusa/yii2-nestable": "*"
     },
     "autoload": {
         "psr-4": {
-            "cornernote\\menu\\": ""
+            "cornernote\\menu\\": "src"
         }
     }
 }
