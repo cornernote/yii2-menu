@@ -13,7 +13,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "slatiusa/yii2-nestable": "*"
+        "slatiusa/yii2-nestable": "dev-master"
     },
     "autoload": {
         "psr-4": {
