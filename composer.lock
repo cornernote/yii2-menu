@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e9355d35c7f171c845078daf1338fbfa",
+    "hash": "5c6477331d369cecf48db78d39a798bd",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -404,7 +404,7 @@
         },
         {
             "name": "slatiusa/yii2-nestable",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Hommer101/yii2-nestable.git",
@@ -2325,9 +2325,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "slatiusa/yii2-nestable": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
