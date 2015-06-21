@@ -13,7 +13,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "slatiusa/yii2-nestable": "dev-master"
+        "slatiusa/yii2-nestable": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*",
