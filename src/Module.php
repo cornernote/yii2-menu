@@ -1,11 +1,28 @@
 <?php
 
-namespace app\modules\menu;
+namespace cornernote\menu;
 
+/**
+ * Menu Module
+ * @package cornernote\menu
+ */
 class Module extends \yii\base\Module
 {
-    public $controllerNamespace = 'app\modules\menu\controllers';
+    /**
+     * @var array
+     */
+    public $tableMap = [
+        'menu' => 'menu',
+    ];
 
+    /**
+     * @var string
+     */
+    public $controllerNamespace = 'cornernote\menu\controllers';
+
+    /**
+     *
+     */
     public function init()
     {
         parent::init();

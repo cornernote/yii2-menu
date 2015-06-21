@@ -12,6 +12,8 @@ Menu manager for Yii2.
 
 ## Installation
 
+### 1. Download
+
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
 Either run
@@ -28,3 +30,27 @@ or add
 
 to the `require` section of your `composer.json` file.
 
+
+### 2. Configure
+
+Add following to your main configuration file:
+
+```
+'modules' => [
+    'menu' => [
+        'class' => 'cornernote\menu\Module',
+    ],
+],
+```
+
+### 3. Create Tables
+
+Update your database schema by applying the migrations:
+
+```
+yii migrate/up --migrationPath=@vendor/cornernote/yii2-menu/src/migrations
+```
+
+## Manage Menus
+
+Open a browser and go to `example.com/?r=menu` to start managing your menu system.

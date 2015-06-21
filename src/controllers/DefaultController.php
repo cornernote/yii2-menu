@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\menu\controllers;
+namespace cornernote\menu\controllers;
 
 use yii\web\Controller;
 
