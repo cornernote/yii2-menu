@@ -8,20 +8,26 @@ namespace cornernote\menu;
  */
 class Module extends \yii\base\Module
 {
+
     /**
-     * @var array
+     * @inheritdoc
+     */
+    public $layout = 'main';
+
+    /**
+     * @var string
      */
     public $tableMap = [
         'menu' => 'menu',
     ];
 
     /**
-     * @var string
+     * @inheritdoc
      */
     public $controllerNamespace = 'cornernote\menu\controllers';
 
     /**
-     *
+     * @inheritdoc
      */
     public function init()
     {

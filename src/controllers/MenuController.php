@@ -16,8 +16,6 @@ use cornernote\returnurl\ReturnUrl;
 class MenuController extends Controller
 {
 
-    public $layout = '@app/views/layouts/main';
-
     /**
      * // TODO - set permissions
      * @inheritdoc
