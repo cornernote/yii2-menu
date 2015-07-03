@@ -8,6 +8,9 @@ use cornernote\returnurl\ReturnUrl;
  * @var cornernote\menu\models\Menu $model
  */
 
+if (Yii::$app->request->isAjax) {
+    return;
+}
 ?>
 
 <!-- menu buttons -->

@@ -27,8 +27,8 @@ class MenuSearch extends Menu
     public function rules()
     {
         return [
-            [['id', 'tree', 'lft', 'rgt', 'depth'], 'integer'],
-            [['name'], 'safe'],
+            [['id', 'tree'], 'integer'],
+            [['label'], 'safe'],
         ];
     }
 
@@ -57,12 +57,9 @@ class MenuSearch extends Menu
         $query->andFilterWhere([
             'id' => $this->id,
             'tree' => $this->tree,
-            'lft' => $this->lft,
-            'rgt' => $this->rgt,
-            'depth' => $this->depth,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->andFilterWhere(['like', 'label', $this->label]);
 
         return $dataProvider;
     }

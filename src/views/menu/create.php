@@ -6,7 +6,7 @@ use cornernote\returnurl\ReturnUrl;
 
 /**
  * @var yii\web\View $this
- * @var app\models\Menu $model
+ * @var cornernote\menu\models\Menu $model
  */
 
 $this->title = Yii::t('app', 'Create Menu');

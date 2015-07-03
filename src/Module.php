@@ -6,13 +6,19 @@ namespace cornernote\menu;
  * Menu Module
  * @package cornernote\menu
  */
-class Module extends \yii\base\Module
+class Module extends \kartik\tree\Module
 {
+
+    /**
+     * @inheritdoc
+     */
+    public $layout = 'main';
+
     /**
      * @var array
      */
     public $tableMap = [
-        'menu' => 'menu',
+        'menu' => 'menu_tree',
     ];
 
     /**
@@ -20,13 +26,16 @@ class Module extends \yii\base\Module
      */
     public $controllerNamespace = 'cornernote\menu\controllers';
 
-    /**
-     *
-     */
+
     public function init()
     {
         parent::init();
-
-        // custom initialization code goes here
+        \Yii::setAlias('@kvtree', '@vendor/kartik-v/yii2-tree-manager');
+//        $this->modules = [
+//            'treemanager' => [
+//                'class' => '\kartik\tree\Module',
+//            ],
+//        ];
     }
+
 }

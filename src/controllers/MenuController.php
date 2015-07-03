@@ -16,8 +16,6 @@ use cornernote\returnurl\ReturnUrl;
 class MenuController extends Controller
 {
 
-    public $layout = '@app/views/layouts/main';
-
     /**
      * // TODO - set permissions
      * @inheritdoc
@@ -62,18 +60,11 @@ class MenuController extends Controller
 
     /**
      * Lists all Menu models.
-     * @param int $depth
      * @return mixed
      */
-    public function actionIndex($depth = 1)
+    public function actionIndex()
     {
-        $searchModel = new MenuSearch;
-        $searchModel->depth = $depth;
-        $dataProvider = $searchModel->search(Yii::$app->request->get());
-
         return $this->render('index', [
-            'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
         ]);
     }
 
@@ -110,7 +101,7 @@ class MenuController extends Controller
             }
             if ($saved) {
                 Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Menu has been created.'));
-                return $this->redirect(ReturnUrl::getUrl());
+                return $this->redirect(ReturnUrl::getUrl(['index']));
             }
         } else {
             $model->load(Yii::$app->request->get());
@@ -131,7 +122,7 @@ class MenuController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Menu has been updated.'));
-            return $this->redirect(['view', 'id' => $model->id, 'ru' => ReturnUrl::getRequestToken()]);
+            return $this->redirect(ReturnUrl::getUrl(['index']));
         } elseif (!Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->get());
         }
@@ -148,9 +139,11 @@ class MenuController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
-        Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Menu has been deleted.'));
+        $model = $this->findModel($id);
+        //$model->delete();
+        $model->deleteWithChildren();
 
+        Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Menu has been deleted.'));
         return $this->redirect(ReturnUrl::getUrl(['index']));
     }
 
